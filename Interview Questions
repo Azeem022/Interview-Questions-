@@ -310,3 +310,258 @@ Inheritance Tree
 C++ always creates a new inheritance tree.
 
 Java uses a Single inheritance tree as classes in Java are the child of object classes in Java.
+
+
+=======================================Explain public static void main(String args[]) in Java.
+public static void main(String args[])
+This is the entry point of every standalone Java application. Let’s analyze each keyword one by one:
+
+1. public
+public means the method is accessible from anywhere.
+
+JVM (Java Virtual Machine) needs to access this method from outside your class, so it must be public.
+
+If it were private or default, JVM couldn’t call it.
+
+2. static
+static means the method belongs to the class, not an object.
+
+JVM can call main without creating an object of the class.
+
+If it weren’t static, JVM would need to instantiate your class before calling main, which would be a problem since no object exists at program start.
+
+3. void
+void means this method does not return anything.
+
+JVM doesn’t expect main to give back a value; it just executes instructions inside it.
+
+4. main
+This is the name of the method.
+
+JVM looks specifically for a method called main as the program’s starting point.
+
+If you name it anything else (e.g., start), the JVM won’t recognize it as the entry point.
+
+5. String args[]
+This is the parameter: an array of String objects.
+
+It holds command-line arguments that you pass when running the program.
+
+Example:
+
+bash
+Copy
+Edit
+java MyClass Hello World
+Then inside main:
+
+args[0] = "Hello"
+
+args[1] = "World"
+
+
+======================================== What is Java String Pool?
+1️⃣ What is it?
+
+The Java String Pool (also called String Constant Pool) is a special memory area inside the heap that stores unique String literals.
+
+If two strings have the same value, Java stores only one copy in the pool and points all references to that same object.
+
+This helps save memory and makes string comparison faster.
+
+2️⃣ How it works
+
+Example:
+
+String s1 = "Hello";
+String s2 = "Hello";
+
+
+Here, "Hello" is a string literal.
+
+Java checks the String Pool: if "Hello" already exists, it just points s2 to the same object.
+
+Both s1 and s2 refer to the same memory location.
+
+System.out.println(s1 == s2); // true (same object)
+
+
+But if you use new keyword:
+
+String s3 = new String("Hello");
+
+
+s3 creates a new String object on the heap, not in the pool.
+
+Even though the value is the same, the object is different:
+
+System.out.println(s1 == s3); // false (different objects)
+System.out.println(s1.equals(s3)); // true (same content)
+
+3️⃣ Key Points
+
+String literals are automatically placed in the String Pool.
+
+new String() always creates a new object on heap.
+
+Use intern() to force a String object into the pool:
+
+String s4 = new String("Hello").intern();
+System.out.println(s1 == s4); // true
+
+
+Benefits of String Pool:
+
+Saves memory (no duplicates).
+
+Faster comparisons for == (since same reference can be compared).
+
+
+====================================What will happen if we don't declare the main as static?
+
+1️⃣ The normal main method
+public static void main(String[] args) {
+    System.out.println("Hello, Java!");
+}
+
+
+static means the method belongs to the class, not an object.
+
+JVM can call it without creating an instance of the class.
+
+2️⃣ What happens if we remove static?
+public void main(String[] args) {
+    System.out.println("Hello, Java!");
+}
+
+
+Now main is an instance method, not a class method.
+
+JVM cannot call it without creating an object of the class.
+
+Since JVM doesn’t create an object automatically at program start, it won’t find a valid main method.
+
+3️⃣ Result
+
+If you try to run it:
+
+java MyClass
+
+
+You’ll get an error like:
+
+Error: Main method is not static in class MyClass, please define the main method as:
+   public static void main(String[] args)
+
+4️⃣ Why static is necessary
+
+JVM starts execution without any objects.
+
+static allows JVM to call main directly using class name, e.g., MyClass.main(args).
+
+Without static, JVM would have to instantiate the class first, which it doesn’t do automatically.
+
+============================================What are Packages in Java?
+Packages in Java can be defined as the grouping of related types of classes, interfaces, etc providing access to protection and namespace management.
+
+
+=============================================Why Packages are used?
+Packages are used in Java in order to prevent naming conflicts, control access, and make searching/locating and usage of classes, interfaces, etc easier.
+
+===========================================14. What are the advantages of Packages in Java?
+There are various advantages of defining packages in Java.
+
+Packages avoid name clashes.
+The Package provides easier access control.
+We can also have the hidden classes that are not visible outside and are used by the package.
+It is easier to locate the related classes.
+
+
+==========================================15. How many types of packages are there in Java?
+There are two types of packages in Java
+
+User-defined packages
+Build In packages
+
+
+===========================================16. Explain different data types in Java.
+There are 2 types of data types in Java as mentioned below:
+
+Primitive Data Type
+Non-Primitive Data Type or Object Data type
+Primitive Data Type: Primitive data are single values with no special capabilities. There are 8 primitive data types:
+
+boolean: stores value true or false
+byte: stores an 8-bit signed two's complement integer
+char: stores a single 16-bit Unicode character
+short: stores a 16-bit signed two’s complement integer
+int: stores a 32-bit signed two’s complement integer
+long: stores a 64-bit two’s complement integer
+float: stores a single-precision 32-bit IEEE 754 floating-point
+double: stores a double-precision 64-bit IEEE 754 floating-point
+Non-Primitive Data Type: Reference Data types will contain a memory address of the variable's values because it is not able to directly store the values in the memory. Types of Non-Primitive are mentioned below:
+
+Strings
+Array
+Class
+Object
+Interface
+
+
+==========================================18. Can we declare Pointer in Java?
+
+📌 Can we declare Pointer in Java?
+
+👉 No, Java does not support explicit pointers like C or C++.
+
+In C/C++, we can write:
+
+int *ptr;
+int x = 10;
+ptr = &x;   // ptr stores the memory address of x
+
+
+But in Java, this is not allowed ❌.
+
+🤔 Why Java does not support pointers?
+
+Security 🔒
+
+Direct memory access using pointers can lead to security issues (like buffer overflows, accessing restricted memory).
+
+Java is designed to be safe and secure (important for network and enterprise apps).
+
+Simplicity ✨
+
+Pointers make code more complex and harder to read/debug.
+
+Java designers wanted a cleaner, easier-to-learn language than C++.
+
+Automatic Memory Management 🗑️
+
+Java uses Garbage Collection (GC) to manage memory automatically.
+
+If pointers were allowed, GC could not track memory usage safely.
+
+📌 Then how does Java work without pointers?
+
+Actually, Java uses references, which are like safe pointers.
+
+Example:
+
+String s1 = new String("Hello");
+String s2 = s1;   // s2 refers to the same object as s1
+
+
+Here, s1 and s2 are references to the object "Hello".
+
+You don’t see or manipulate memory addresses directly (like in C++).
+
+JVM handles the memory internally.
+
+
+===============================19. What is the default value of byte datatype in Java?
+The default value of the byte datatype in Java is 0.
+
+=====================================20. What is the default value of float and double datatype in Java?
+The default value of the float is 0.0f and of double is 0.0d in Java.
