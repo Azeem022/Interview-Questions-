@@ -115,9 +115,11 @@ making it suitable for everything from desktop apps to web, mobile, and enterpri
 It is the engine that executes Java programs.
 
 Without JVM, Java code cannot run.
-JVM stands for Java Virtual Machine it is a Java interpreter. It is responsible for loading, verifying, and executing the bytecode created in Java.
+JVM stands for Java Virtual Machine it is a Java interpreter. It is responsible for loading, verifying, and executing the bytecode
+created in Java.
 
-Although it is platform dependent which means the software of JVM is different for different Operating Systems it plays a vital role in making Java platform Independent.
+Although it is platform dependent which means the software of JVM is different for different Operating Systems it plays a vital role 
+in making Java platform Independent.
 
 To know more about the topic refer to JVM in Java.
 
@@ -246,7 +248,8 @@ Java is platform-independent.
 JRE: JRE stands for Java Runtime Environment, it is an installation package that provides an environment to run the Java program or 
 application on any machine.
 
-JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that includes 
+JDK: JDK stands for Java Development Kit which provides the environment to develop and execute Java programs. JDK is a package that
+includes 
 two things Development Tools to provide an environment to develop your Java programs and, JRE to execute Java programs or applications.
 
 To know more about the topic refer to the Differences between JVM, JRE, and JDK.
@@ -328,7 +331,8 @@ static means the method belongs to the class, not an object.
 
 JVM can call main without creating an object of the class.
 
-If it weren’t static, JVM would need to instantiate your class before calling main, which would be a problem since no object exists at program start.
+If it weren’t static, JVM would need to instantiate your class before calling main, which would be a problem since no object 
+exists at program start.
 
 3. void
 void means this method does not return anything.
@@ -462,11 +466,13 @@ static allows JVM to call main directly using class name, e.g., MyClass.main(arg
 Without static, JVM would have to instantiate the class first, which it doesn’t do automatically.
 
 ============================================What are Packages in Java?
-Packages in Java can be defined as the grouping of related types of classes, interfaces, etc providing access to protection and namespace management.
+Packages in Java can be defined as the grouping of related types of classes, interfaces, etc providing access to protection
+and namespace management.
 
 
 =============================================Why Packages are used?
-Packages are used in Java in order to prevent naming conflicts, control access, and make searching/locating and usage of classes, interfaces, etc easier.
+Packages are used in Java in order to prevent naming conflicts, control access, and make searching/locating and usage of classes,
+interfaces, etc easier.
 
 ===========================================14. What are the advantages of Packages in Java?
 There are various advantages of defining packages in Java.
@@ -499,7 +505,8 @@ int: stores a 32-bit signed two’s complement integer
 long: stores a 64-bit two’s complement integer
 float: stores a single-precision 32-bit IEEE 754 floating-point
 double: stores a double-precision 64-bit IEEE 754 floating-point
-Non-Primitive Data Type: Reference Data types will contain a memory address of the variable's values because it is not able to directly store the values in the memory. Types of Non-Primitive are mentioned below:
+Non-Primitive Data Type: Reference Data types will contain a memory address of the variable's values because it is not able 
+to directly store the values in the memory. Types of Non-Primitive are mentioned below:
 
 Strings
 Array
