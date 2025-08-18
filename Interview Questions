@@ -8,6 +8,9 @@ It means:
 
 This is achieved using JVM (Java Virtual Machine) and Bytecode.
 
+Bytecode is not human-readable, but it's also not machine code. It's an intermediate code between high-level source code 
+(like Java or Python) and the machine code that runs on your computer.
+
 ==========================🔹 What is an Operating System (OS)?
 
 An Operating System (OS) is a system software that acts as a bridge between the computer hardware and the user/programs.
@@ -120,8 +123,6 @@ created in Java.
 
 Although it is platform dependent which means the software of JVM is different for different Operating Systems it plays a vital role 
 in making Java platform Independent.
-
-To know more about the topic refer to JVM in Java.
 
 
 ====================================What is JIT?
@@ -271,8 +272,17 @@ Java is Platform Independent
 Application
 
 C++ is mainly used for System Programming
+System Programming
+➤ Definition:
+
+System programming involves writing software that provides services to the computer hardware or forms the foundation for running application programs.
 
 Java is Mainly used for Application Programming
+Application Programming
+➤ Definition:
+
+Application programming is the creation of software that performs specific tasks for users, such as word processing, web browsing, or gaming.
+
 
 Hardware
 
@@ -281,8 +291,11 @@ C++ is nearer to hardware
 Java is not so interactive with hardware
 
 Global Scope
-
 C++ supports global and namespace scope.
+🌍 Global Scope – Explained Simply
+
+Global scope refers to variables or functions that are accessible from anywhere in a program, unless shadowed or restricted
+
 
 Java doesn't support global scope.
 
