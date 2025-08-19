@@ -380,7 +380,7 @@ args[1] = "World"
 ======================================== What is Java String Pool?
 1️⃣ What is it?
 
-The Java String Pool (also called String Constant Pool) is a special memory area inside the heap that stores unique String literals.
+The Java String Pool is a special memory area inside the heap that stores unique String literals.
 
 If two strings have the same value, Java stores only one copy in the pool and points all references to that same object.
 
