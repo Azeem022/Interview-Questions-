@@ -585,3 +585,197 @@ The default value of the byte datatype in Java is 0.
 
 =====================================20. What is the default value of float and double datatype in Java?
 The default value of the float is 0.0f and of double is 0.0d in Java.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=========================================What is the Wrapper class in Java?
+🔹 What is a Wrapper Class in Java?
+
+In Java, wrapper classes are object representations of primitive data types.
+They “wrap” a primitive value inside an object, so that you can use primitives in places where objects are required (like Collections, Generics, etc.).
+
+🔹 Primitive vs Wrapper Classes
+Primitive Type	Wrapper Class
+byte	Byte
+short	Short
+int	Integer
+long	Long
+float	Float
+double	Double
+char	Character
+boolean	Boolean
+
+
+============================================Why do we need wrapper classes?
+The wrapper class is an object class that encapsulates the primitive data types, and we need them for the following reasons:
+
+Wrapper classes are final and immutable
+Provides methods like valueOf(), parseInt(), etc.
+It provides the feature of autoboxing and unboxing.
+
+
+===========================================Differentiate between instance and local variables.
+Instance Variable
+
+Local Variable
+
+Declared outside the method, directly invoked by the method.
+
+Declared within the method.                                                              
+
+Has a default value.
+
+No default value
+
+It can be used throughout the class.
+
+The scope is limited to the method.
+
+
+==============================================26. What is the default value stored in Local Variables?
+There is no default value stored with local variables. Also, primitive variables and objects don't have any default values.
+
+
+================================================Explain the difference between instance variable and a class variable.
+Instance Variable: A class variable without the static modifier is called an instance variable. It is unique to each 
+object (instance) of the class and is not shared between instances.
+
+
+=============================================28. What is a static variable?
+The static keyword is used to share the same variable or method of a given class. Static variables are the variables
+that once declared then a single copy of the variable is created and shared among all objects at the class level.
+
+============================================🔹 Static Variable in Java
+
+A static variable is a variable that belongs to the class, not to any specific object.
+
+It is shared among all objects of that class.
+
+Memory for static variables is allocated only once when the class is loaded into memory.
+
+
+=========================================30. What do you understand by an IO stream?
+2-768
+
+Java brings various Streams with its I/O package that helps the user to perform all the input-output operations.
+These streams support all types of objects, data types, characters, files, etc to fully execute the I/O operations.
+
+
+===================================================33. What are the FileInputStream and FileOutputStream?
+
+FileInputStream and FileOutputStream in Java
+
+Both are part of the java.io package and belong to the Byte Stream family.
+They are used to handle binary data (like images, audio, video, PDF, or even text files byte-by-byte).
+
+🔹 1. FileInputStream
+
+Used to read data (bytes) from a file.
+
+It is a subclass of InputStream.
+
+Key methods:
+
+int read() → reads one byte of data (returns -1 at end of file).
+
+int read(byte[] b) → reads multiple bytes into a byte array.
+
+void close() → closes the stream.
+
+Example:
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class FileInputStreamExample {
+    public static void main(String[] args) throws IOException {
+        FileInputStream fis = new FileInputStream("test.txt");
+        int i;
+        while ((i = fis.read()) != -1) {
+            System.out.print((char) i); // convert byte to char
+        }
+        fis.close();
+    }
+}
+
+🔹 2. FileOutputStream
+
+Used to write data (bytes) to a file.
+
+It is a subclass of OutputStream.
+
+Key methods:
+
+void write(int b) → writes one byte.
+
+void write(byte[] b) → writes an array of bytes.
+
+void close() → closes the stream.
+
+Example:
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileOutputStreamExample {
+    public static void main(String[] args) throws IOException {
+        FileOutputStream fos = new FileOutputStream("test.txt");
+        String data = "Hello, FileOutputStream!";
+        fos.write(data.getBytes()); // convert string to bytes
+        fos.close();
+        System.out.println("Data written successfully.");
+    }
+}
+
+🔹 When to Use
+
+FileInputStream → Reading binary/text data from files.
+
+FileOutputStream → Writing binary/text data to files.
+
+
+=====================================================34. What is the purpose of using BufferedInputStream and BufferedOutputStream classes?
+When we are working with the files or stream then to increase the Input/Output performance of the program we need to use the BufferedInputStream 
+and BufferedOutputStream classes. These both classes provide the capability of buffering which means that the data will be stored in a buffer
+before writing to a file or reading it from a stream. It also reduces the number of times our OS needs to interact with the network or the disk. 
+Buffering allows programs to write a big amount of data instead of writing it in small chunks. This also reduces the overhead of accessing the network or the disk.
+
+
+==========================================35. What are FilterStreams?
+Stream filter or Filter Streams returns a stream consisting of the elements of this stream that match the given predicate. While working filter() 
+it doesn't actually perform filtering but instead creates a new stream that, when traversed, contains the elements of initial streams that match the given predicate.
