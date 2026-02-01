@@ -1,0 +1,291 @@
+🔹 Top 30 HTML Interview Questions
+	1. What is HTML?
+	HTML stands for HyperText Markup Language.
+	It is used to create and structure web pages.
+	With HTML, we tell the browser what content to show, like headings, paragraphs, images, links, and forms.
+	👉 In simple words:
+	HTML is used to build the basic structure of a website.
+	
+	
+	2. What is the basic structure of an HTML document?
+	The basic structure of an HTML document consists of four main parts:
+		1. <!DOCTYPE html> – tells the browser that the document is HTML5
+		2. <html> – the root element of the page
+		3. <head> – contains page information like title and meta data
+		4. <body> – contains the visible content of the webpage
+	
+	Simple Example:
+	
+	<!DOCTYPE html>
+<html>
+<head>
+    <title>My Web Page</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <p>This is my first webpage.</p>
+</body>
+</html>
+	
+	3. What is <!DOCTYPE html> and why is it used?
+	<!DOCTYPE html> tells the browser that the document is written in HTML5.
+	It helps the browser display the webpage correctly by following standard HTML rules.
+	
+	Why is it used? (Simple points)
+		• It informs the browser about the HTML version
+		• It prevents display errors
+		• It ensures the page runs in standard mode
+	
+	4. What is the difference between HTML tags and elements?
+	• HTML tags are used to define or mark the start and end of an element.
+	• HTML elements include the start tag, content, and end tag.
+
+Example:
+
+<p>This is a paragraph</p>
+	• <p> and </p> → Tags
+	• <p>This is a paragraph</p> → Element
+
+	1. What are attributes in HTML?
+	Attributes provide extra information about HTML elements.
+	They are written inside the opening tag and usually come in name = value format.
+	Attributes tell the browser how an element should behave or look.
+	
+	Example:
+	
+	<a href="https://example.com">Visit</a>
+		• href → attribute name
+		• "https://example.com" → attribute value
+	
+	2. What are empty (void) elements?
+	Empty or void elements are HTML elements that do not have any content and do not need a closing tag.
+	They are used to perform a specific task on the webpage.
+	
+	Examples:
+	
+	<br>    <!-- line break -->
+<hr>    <!-- horizontal line -->
+<img>   <!-- image -->
+<input> <!-- input field -->
+	
+	3. What is the difference between <div> and <span>?
+	• <div> is a block-level element.
+It starts on a new line and takes the full width of the page.
+	• <span> is an inline element.
+It stays in the same line and takes only the required space.
+
+Example:
+
+<div>This is a div</div>
+<span>This is a span</span>
+
+One-line interview answer:
+	<div> is a block-level element used for grouping content, while <span> is an inline element used for styling small parts of text.
+
+
+	
+	1. What is the difference between <b> and <strong>?
+	• <b> is used to make text bold only for appearance.
+It does not add any importance.
+	• <strong> is used to make text bold with importance.
+It tells the browser and screen readers that the text is important.
+	
+	2. What is the <a> tag and how does it work?
+	The <a> tag is used to create links (hyperlinks) in HTML.
+	It connects one webpage to another or to a different part of the same page.
+	It works using the href attribute, which contains the link address.
+	
+	Example:
+	
+	<a href="https://example.com">Visit Website</a>
+	When the user clicks the link, the browser opens the page given in href.
+
+	1. What is the difference between absolute and relative URLs?
+	• Absolute URL contains the full address of a webpage, including protocol and domain name.
+	• Relative URL contains a partial address and works based on the current page location.
+
+Example:
+
+<!-- Absolute URL -->
+<a href="https://www.example.com/about.html">About</a>
+<!-- Relative URL -->
+<a href="about.html">About</a>
+
+
+	1. What is the <img> tag and what is the use of alt attribute?
+	The <img> tag is used to display images on a webpage.
+	It does not have a closing tag and works using attributes.
+	The alt attribute provides alternate text for an image.
+	
+	Why is alt important?
+		• It shows text if the image does not load
+		• It helps screen readers for visually impaired users
+		• It improves SEO
+	
+	Example:
+	
+	<img src="logo.png" alt="Company Logo">
+
+	1. What are the different types of lists in HTML?
+	There are three types of lists in HTML:
+		1. Ordered List (<ol>) – shows items in numbered order
+		2. Unordered List (<ul>) – shows items with bullets
+		3. Description List (<dl>) – shows items with descriptions
+	
+	2. What is a table in HTML?
+	A table in HTML is used to display data in rows and columns, like marks, employee details, or reports.
+	It helps to show data in a structured and readable format.
+
+	1. What is the difference between <tr>, <td>, and <th>?
+	• <tr> (table row)
+Used to create a row in a table.
+	• <td> (table data)
+Used to create normal data cells inside a row.
+	• <th> (table header)
+Used to create header cells.
+Text inside <th> is bold and centered by default.
+
+	1. What is rowspan and colspan?
+	• rowspan is used to merge multiple rows into a single cell.
+	• colspan is used to merge multiple columns into a single cell.
+	
+	2. What is a form in HTML?
+	A form in HTML is used to collect user input such as name, email, password, or feedback.
+	The data entered in a form is usually sent to a server for processing.
+	
+	3. What is the difference between GET and POST method?
+	• GET method
+		• Sends data in the URL
+		• Less secure
+		• Used for fetching data
+		• Has data size limit
+	• POST method
+		• Sends data in the request body
+		• More secure
+		• Used for sending sensitive data
+		• No size limit
+	
+	4. What are different types of <input> elements?
+	<input> elements are used to take input from the user in a form.
+	Some common types are:
+		• text – for normal text
+		• password – hides input text
+		• email – for email address
+		• number – for numbers
+		• radio – select one option
+		• checkbox – select multiple options
+		• date – pick a date
+		• file – upload a file
+		• submit – submit the form
+		• reset – reset the form
+	
+	5. What is the name attribute in forms?
+	The name attribute is used to identify form fields.
+	When a form is submitted, the data is sent to the server in name = value pairs.
+	Without the name attribute, the input data will not be sent to the server.
+	
+	Example:
+	
+	<form>
+  <input type="text" name="username">
+  <input type="password" name="password">
+</form>
+
+	1. What is HTML5?
+	HTML5 is the latest version of HTML used to create modern websites.
+	It adds new tags and features that make websites more interactive, fast, and user-friendly, like audio, video, and semantic elements.
+	
+	2. What are semantic elements in HTML5?
+	Semantic elements are HTML tags that clearly describe their meaning and purpose in the webpage.
+	They make the code easy to understand for developers, browsers, and search engines.
+	
+	Examples of semantic elements:
+	
+	<header>, <footer>, <section>, <article>, <nav>
+	
+	.
+	3. What is the difference between <div> and semantic tags?
+	• <div> is a non-semantic tag.
+It does not tell anything about the content inside it.
+	• Semantic tags clearly describe the meaning of the content inside them, like header, footer, article, etc.
+Semantic tags help in better SEO, readability, and accessibility.
+
+Example:
+
+<div>Header Content</div>
+<header>Header Content</header>
+
+	1. What is accessibility in HTML?
+	Accessibility in HTML means creating web pages that everyone can use, including people with disabilities.
+	It ensures that websites work well with screen readers, keyboard navigation, and other assistive technologies.
+	
+	Examples of accessibility:
+		• Using alt text for images
+		• Using proper semantic tags
+		• Making forms readable and usable
+
+	1. What is the viewport meta tag?
+	The viewport meta tag is used to control how a webpage looks on different screen sizes, especially on mobile devices.
+	It helps make websites responsive.
+	
+	Example:
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	1. What is the difference between id and class?
+	• id
+		○ Used for one unique element
+		○ Cannot be repeated on the same page
+		○ Written with # in CSS
+	• class
+		○ Used for multiple elements
+		○ Can be reused many times
+		○ Written with . in CSS
+
+Example:
+
+<div id="header"></div>
+<p class="text"></p>
+<p class="text"></p>
+	
+	1. Is HTML case-sensitive?
+	No, HTML is not case-sensitive.
+	HTML tags and attributes work the same whether written in uppercase or lowercase.
+	However, lowercase is recommended because it follows HTML standards and improves readability.
+	
+	2. How does HTML work with CSS and JavaScript?
+	• HTML creates the structure of a webpage
+	• CSS is used for styling the webpage (colors, layout, design)
+	• JavaScript adds functionality and interactivity (buttons, validation, animations)
+They work together to build a complete website.
+
+Simple example:
+
+<h1>Hello</h1>        <!-- HTML -->
+<style>h1{color:red;}</style>   <!-- CSS -->
+<script>alert("Hi");</script>   <!-- JavaScript -->
+	
+	
+35. What is target="_blank"?
+Opens link in new tab.
+	
+	
+value attribute?
+Default value.
+55. placeholder?
+Hint text.
+56. required?
+Mandatory field.
+57. readonly?
+Cannot edit.
+58. disabled?
+Cannot use or submit.
+59. <label>?
+Label for input.
+60. <textarea>?
+Multi-line text input.
+61. <select> & <option>?
+Dropdown list.
+62. <button>?
+Clickable button
+
