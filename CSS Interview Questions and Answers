@@ -1,0 +1,717 @@
+🔹 CSS Interview Questions (Important & Basics)
+🔸 CSS Basics (Must-Know)
+	1. What is CSS?
+	CSS is used to style and design web pages.
+	It controls how HTML elements look, such as colors, fonts, layout, spacing, and alignment.
+	👉 Simple words:
+	CSS makes the website look good.
+	One-line interview answer:
+		CSS is used to style and design web pages.
+	
+	2. What does CSS stand for?
+	CSS stands for Cascading Style Sheets.
+	One-line interview answer:
+		CSS stands for Cascading Style Sheets.
+	
+	3. Why do we use CSS?
+	We use CSS to:
+		• Make websites attractive
+		• Control layout and design
+		• Keep design separate from content
+		• Apply the same style to multiple pages
+		• Make websites responsive
+	Simple interview answer:
+		CSS is used to style web pages and separate design from HTML content.
+	1. 
+	2. 
+	3. What are the different types of CSS?
+	There are three types of CSS:
+		1. Inline CSS
+		2. Internal CSS
+		3. External CSS
+	One-line interview answer:
+		CSS has three types: inline, internal, and external CSS.
+	
+	4. What is inline CSS?
+	Inline CSS is written directly inside an HTML element using the style attribute.
+	It affects only one element.
+	Example:
+	
+	<p style="color:red;">Hello</p>
+	One-line interview answer:
+		Inline CSS is applied directly to an HTML element using the style attribute.
+	
+	5. What is internal CSS?
+	Internal CSS is written inside the <style> tag within the <head> section of an HTML page.
+	It styles one single page.
+	Example:
+	
+	<style>
+  p { color: blue; }
+</style>
+	One-line interview answer:
+		Internal CSS is defined inside the style tag in the head section and applies to one page.
+	
+	6. What is external CSS?
+	External CSS is written in a separate .css file and linked to HTML using the <link> tag.
+	It can style multiple pages and is the best practice.
+	Example:
+	
+	<link rel="stylesheet" href="style.css">
+	3. 
+	4. 
+5. Which CSS type is best and why?
+External CSS is the best.
+Why?
+	• It can style multiple pages
+	• Makes code clean and reusable
+	• Easy to maintain and update
+	• Improves performance
+One-line interview answer:
+	External CSS is best because it is reusable, easy to maintain, and can style multiple pages.
+
+6. What is CSS syntax?
+CSS syntax defines how CSS rules are written.
+It has three parts:
+	1. Selector
+	2. Property
+	3. Value
+Example:
+
+p {
+  color: red;
+}
+One-line interview answer:
+	CSS syntax consists of a selector, property, and value.
+
+7. What is a CSS selector?
+A CSS selector is used to select HTML elements that we want to style.
+Example:
+
+p { color: blue; }
+Here, p is the selector.
+One-line interview answer:
+	A CSS selector is used to target HTML elements for styling.
+
+🔸 Selectors & Properties (VERY IMPORTANT)
+	11. What are the different types of CSS selectors?
+	12. What is class selector?
+	13. What is id selector?
+	14. Difference between class and id?
+	15. What is universal selector?
+	16. What is grouping selector?
+	17. What is descendant selector?
+	18. What is attribute selector?
+	19. What is pseudo-class?
+	20. What is pseudo-element?
+
+🔸 Box Model (🔥 MOST IMPORTANT)
+	21. What is the CSS box model?
+	The CSS box model explains how every HTML element is treated as a box in a webpage.
+	It controls the size, spacing, and layout of elements.
+	One-line interview answer:
+		The CSS box model defines the layout of an element using content, padding, border, and margin.
+	
+	22. What are the components of the box model?
+	The CSS box model has four components:
+		1. Content – actual text or image
+		2. Padding – space inside the border
+		3. Border – outline around padding
+		4. Margin – space outside the border
+	Order:
+	Content → Padding → Border → Margin
+	One-line interview answer:
+		The components of the box model are content, padding, border, and margin.
+	
+	23. Difference between margin and padding?
+	Margin	Padding
+	Space outside the border	Space inside the border
+	Creates space between elements	Creates space inside element
+	Transparent	Affects background color
+	Simple interview answer:
+		Margin controls outer spacing, while padding controls inner spacing.
+		
+21. What is border?
+A border is a line that surrounds the padding and content of an element.
+It is used to separate elements visually.
+Example:
+
+div {
+  border: 2px solid black;
+}
+One-line interview answer:
+	A border is the outline around an element’s content and padding.
+
+22. What is box-sizing?
+box-sizing controls how the total width and height of an element are calculated.
+It tells the browser whether padding and border should be included in the size or not.
+Example:
+
+box-sizing: border-box;
+One-line interview answer:
+	Box-sizing defines how an element’s width and height are calculated.
+
+23. Difference between content-box and border-box?
+content-box (default)	border-box
+Width includes only content	Width includes content + padding + border
+Padding & border add extra size	Size remains fixed
+Harder to manage layouts	Easier for layouts ✅
+Example:
+
+box-sizing: content-box;
+box-sizing: border-box;
+
+🔸 Display & Positioning
+	27. What is the display property?
+	The display property controls how an element is shown on the page.
+	It defines the element’s layout behavior.
+	Common values:
+		• block
+		• inline
+		• inline-block
+		• none
+		• flex
+		• grid
+	One-line interview answer:
+		The display property defines how an element is displayed and laid out on a webpage.
+	
+	28. Difference between display: none and visibility: hidden?
+	display: none	visibility: hidden
+	Element is removed from layout	Element is invisible but space remains
+	No space occupied	Space is still occupied
+	Not visible	Not visible
+	Simple interview answer:
+		display: none removes the element completely, while visibility: hidden hides it but keeps its space.
+	
+	29. What is position property?
+	The position property controls how an element is positioned on the page.
+	Common values:
+		• static
+		• relative
+		• absolute
+		• fixed
+		• sticky
+	One-line interview answer:
+		The position property is used to control the placement of elements on a webpage.
+27. Difference between static, relative, absolute, fixed, and sticky?
+	• static
+Default position. Element stays in normal flow.
+	• relative
+Positioned relative to itself using top, left, etc.
+	• absolute
+Positioned relative to nearest positioned parent.
+	• fixed
+Positioned relative to viewport (does not move on scroll).
+	• sticky
+Acts relative at first, then becomes fixed on scroll.
+One-line interview answer:
+	Static is default, relative moves from itself, absolute is positioned to parent, fixed is fixed to screen, and sticky sticks on scroll.
+
+28. What is z-index?
+z-index controls the vertical stacking order of elements.
+Higher z-index appears on top of lower ones.
+⚠ Works only on positioned elements.
+Example:
+
+z-index: 10;
+One-line interview answer:
+	z-index controls which element appears on top when elements overlap.
+
+29. What is overflow?
+The overflow property controls what happens when content exceeds the container size.
+Values:
+	• hidden
+	• scroll
+	• auto
+	• visible
+One-line interview answer:
+	Overflow controls how extra content is handled when it goes outside the container.
+
+🔸 Colors, Units & Sizing
+	33. Different ways to define colors in CSS?
+	Colors in CSS can be defined in multiple ways:
+		1. Color names
+red, blue, green
+		2. Hexadecimal
+#ff0000
+		3. RGB
+rgb(255, 0, 0)
+		4. RGBA (with transparency)
+rgba(255, 0, 0, 0.5)
+		5. HSL
+hsl(0, 100%, 50%)
+	One-line interview answer:
+		CSS colors can be defined using names, hex, RGB, RGBA, and HSL values.
+	
+	34. Difference between px, %, em, rem?
+	Unit	Meaning
+	px	Fixed size
+	%	Relative to parent
+	em	Relative to parent font size
+	rem	Relative to root (html) font size
+	Simple interview answer:
+		px is fixed, % is relative to parent, em depends on parent font size, and rem depends on root font size.
+	
+	35. What is viewport unit (vh, vw)?
+	Viewport units are relative to the screen size.
+		• 1vh = 1% of viewport height
+		• 1vw = 1% of viewport width
+	Example:
+	
+	height: 100vh;
+width: 100vw;
+	One-line interview answer:
+		vh and vw are viewport units used to size elements based on screen height and width.
+33. What is opacity?
+opacity controls the transparency of an element.
+	• Value ranges from 0 to 1
+	• 0 = fully transparent
+	• 1 = fully visible
+Example:
+
+opacity: 0.5;
+One-line interview answer:
+	Opacity controls how transparent an element appears.
+
+34. What is background property?
+The background property is used to style an element’s background.
+It can set:
+	• background color
+	• background image
+	• background position
+	• background repeat
+	• background size
+Example:
+
+background: red;
+background-image: url("img.jpg");
+One-line interview answer:
+	The background property is used to control an element’s background color or image.
+
+35. Difference between max-width and width?
+width	max-width
+Sets fixed width	Sets maximum width
+Can overflow on small screens	Responsive-friendly ✅
+Not flexible	Flexible
+Simple interview answer:
+	width sets a fixed size, while max-width limits the maximum size and allows responsiveness.
+
+🔸 Flexbox & Layout (🔥 Very Important)
+	39. What is Flexbox?
+	Flexbox (Flexible Box Layout) is a CSS layout model used to align, arrange, and distribute space between elements easily.
+	It is mainly used for one-dimensional layouts (row or column).
+	One-line interview answer:
+		Flexbox is a CSS layout system used to align and arrange elements in a row or column.
+	
+	40. What is flex container and flex items?
+		• Flex container
+The parent element where display: flex is applied.
+		• Flex items
+The child elements inside the flex container.
+	Example:
+	
+	.container {
+  display: flex;
+}
+	One-line interview answer:
+		The element with display flex is the flex container, and its children are flex items.
+	
+	41. Difference between justify-content and align-items?
+		• justify-content
+Aligns items along the main axis (horizontal by default).
+		• align-items
+Aligns items along the cross axis (vertical by default).
+	Example:
+	
+	justify-content: center;
+align-items: center;
+	One-line interview answer:
+		justify-content aligns items horizontally, while align-items aligns items vertically.
+39. What is flex-direction?
+flex-direction defines the direction in which flex items are placed.
+Values:
+	• row (default)
+	• row-reverse
+	• column
+	• column-reverse
+Example:
+
+flex-direction: row;
+One-line interview answer:
+	flex-direction controls the direction of flex items.
+
+40. What is flex-wrap?
+flex-wrap controls whether flex items wrap to the next line when there is no space.
+Values:
+	• nowrap (default)
+	• wrap
+	• wrap-reverse
+Example:
+
+flex-wrap: wrap;
+One-line interview answer:
+	flex-wrap allows flex items to move to the next line when needed.
+
+41. What is gap in flexbox?
+gap defines the space between flex items.
+It avoids using margins.
+Example:
+
+gap: 20px;
+One-line interview answer:
+	gap is used to create spacing between flex items.
+
+42. Difference between Flexbox and Grid?
+Flexbox	Grid
+One-dimensional	Two-dimensional
+Row OR column	Rows AND columns
+Best for small layouts	Best for page layouts
+One-line interview answer:
+	Flexbox is for one-dimensional layouts, while Grid is for two-dimensional layouts.
+
+🔸 Responsive Design (VERY IMPORTANT)
+	46. What is responsive design?
+	Responsive design means creating websites that work well on all devices like mobile, tablet, and desktop.
+	The layout automatically adjusts according to screen size.
+	One-line interview answer:
+		Responsive design makes a website adapt to different screen sizes.
+	
+	47. What is a media query?
+	A media query is used in CSS to apply styles based on screen size or device type.
+	It helps in creating responsive designs.
+	Example:
+	
+	@media (max-width: 768px) {
+  body {
+    background: lightblue;
+  }
+}
+	One-line interview answer:
+		Media queries apply CSS based on screen size or device conditions.
+	
+	48. How do you make a website responsive?
+	A website can be made responsive by:
+		• Using media queries
+		• Using flexbox or grid
+		• Using relative units like %, rem, vh, vw
+		• Using responsive images
+		• Using the viewport meta tag
+	Simple interview answer:
+		We make websites responsive using media queries, flexible layouts, and relative units.
+46. What is mobile-first design?
+Mobile-first design means designing the website for mobile devices first, and then adding styles for larger screens like tablets and desktops.
+It improves performance and user experience on mobile.
+One-line interview answer:
+	Mobile-first design means building a website for mobile screens first and then scaling up.
+
+47. What is the viewport meta tag?
+The viewport meta tag controls how a webpage is displayed on different screen sizes, especially on mobile devices.
+It helps make the website responsive.
+Example:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+One-line interview answer:
+	The viewport meta tag helps webpages adapt to different screen sizes.
+
+🔸 CSS Specificity & Important Rules
+	51. What is CSS specificity?
+	CSS specificity decides which CSS rule is applied when multiple rules target the same element.
+	The rule with higher specificity wins.
+	One-line interview answer:
+		CSS specificity determines which style rule is applied to an element.
+	
+	52. Order of CSS priority?
+	CSS follows this priority order (highest to lowest):
+		1. !important
+		2. Inline CSS
+		3. ID selector
+		4. Class selector
+		5. Element selector
+		6. Universal selector
+	If specificity is same, the last written rule wins.
+	One-line interview answer:
+		CSS priority is based on importance, specificity, and order of rules.
+	
+	53. What is !important?
+	!important forces a CSS rule to override all other rules, ignoring specificity.
+	Example:
+	
+	color: red !important;
+	⚠ Should be used only when necessary.
+	One-line interview answer:
+		!important forces a CSS rule to apply over all others.
+51. Inline vs internal vs external CSS priority?
+The priority order is:
+	1. Inline CSS (highest priority)
+	2. Internal CSS
+	3. External CSS (lowest priority)
+⚠ If !important is used, it overrides all.
+One-line interview answer:
+	Inline CSS has the highest priority, followed by internal CSS, and then external CSS.
+
+52. What happens if two styles conflict?
+When two styles apply to the same element:
+	1. Higher specificity wins
+	2. If specificity is same, the last written rule wins
+	3. !important overrides everything
+
+🔸 Transitions, Animations & Effects
+	56. What is transition?
+	A CSS transition is used to create a smooth change from one style to another when an event happens (like hover).
+	Example:
+	
+	button {
+  transition: background-color 0.3s;
+}
+	One-line interview answer:
+		A transition smoothly changes a CSS property when an event occurs.
+	
+	57. What is animation?
+	A CSS animation allows an element to change styles automatically over time without user action.
+	It uses keyframes.
+	Example:
+	
+	@keyframes move {
+  from { left: 0; }
+  to { left: 100px; }
+}
+	One-line interview answer:
+		Animation changes element styles over time using keyframes.
+	
+	58. Difference between transition and animation?
+	Transition	Animation
+	Needs user action	Runs automatically
+	Simple start → end	Multiple steps
+	Uses duration only	Uses keyframes
+	One-line interview answer:
+		Transition needs an event to start, while animation runs automatically using keyframes.
+56. What is transform?
+The transform property is used to change the shape, size, or position of an element.
+Common transformations:
+	• translate (move)
+	• scale (resize)
+	• rotate (rotate)
+	• skew (tilt)
+Example:
+
+transform: scale(1.2);
+One-line interview answer:
+	Transform is used to move, rotate, scale, or skew an element.
+
+57. What is box-shadow?
+box-shadow adds a shadow effect around an element.
+It improves visual depth and design.
+Example:
+
+box-shadow: 2px 2px 5px gray;
+One-line interview answer:
+	box-shadow is used to add shadow effects around elements.
+
+🔸 Advanced-Basic (Good to Know)
+	61. What is CSS Grid?
+	CSS Grid is a layout system used to design two-dimensional layouts using rows and columns.
+	It is best for page layouts.
+	One-line interview answer:
+		CSS Grid is a layout system used to create two-dimensional layouts with rows and columns.
+	
+	62. What are CSS variables?
+	CSS variables are used to store reusable values like colors, fonts, or spacing.
+	They make CSS easy to maintain.
+	Example:
+	
+	--main-color: blue;
+	One-line interview answer:
+		CSS variables store reusable values that can be used throughout the stylesheet.
+	
+	63. What is :root?
+	:root is a pseudo-class that represents the root element (html).
+	It is commonly used to define global CSS variables.
+	Example:
+	
+	:root {
+  --main-color: red;
+}
+	One-line interview answer:
+		:root is used to define global CSS variables.
+	61. What is calc() function?
+	The calc() function is used to perform calculations in CSS.
+	It allows combining different units like %, px, rem.
+	Example:
+	
+	width: calc(100% - 50px);
+	One-line interview answer:
+		calc() is used to calculate CSS values using different units.
+	
+	62. What is object-fit?
+	object-fit controls how images or videos fit inside a container.
+	Common values:
+		• cover
+		• contain
+		• fill
+	Example:
+	
+	object-fit: cover;
+	One-line interview answer:
+		object-fit controls how images or videos are resized within their container.
+	
+	63. What is cursor property?
+	The cursor property changes the mouse pointer style when hovering over an element.
+	Example:
+	
+	cursor: pointer;
+	One-line interview answer:
+		The cursor property controls the mouse pointer style.
+61. What is float?
+The float property is used to move an element to the left or right and allow text to wrap around it.
+It was mainly used for layouts before Flexbox and Grid.
+Example:
+
+float: left;
+One-line interview answer:
+	Float is used to align elements left or right and allow content to wrap around them.
+
+62. What is clear?
+The clear property is used to stop elements from floating next to floated elements.
+Values: left, right, both
+Example:
+
+clear: both;
+One-line interview answer:
+	Clear prevents elements from wrapping around floated elements.
+
+63. What is overflow: auto?
+overflow: auto adds scrollbars only when needed if content exceeds the container size.
+Example:
+
+overflow: auto;
+One-line interview answer:
+	overflow auto shows scrollbars only when content overflows.
+
+64. What is position: sticky?
+position: sticky makes an element behave like relative first and then stick to a position when scrolling.
+Commonly used for sticky headers.
+Example:
+
+position: sticky;
+top: 0;
+One-line interview answer:
+	Position sticky makes an element stick to the screen after scrolling.
+
+🔸 Interview Practical Questions
+	71. Center a div horizontally and vertically – how?
+	Best and modern way: using Flexbox
+	
+	.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+	Other ways (if interviewer asks):
+		• Using Grid
+	
+	display: grid;
+place-items: center;
+	One-line interview answer:
+		We can center a div using Flexbox with justify-content and align-items set to center.
+	
+	72. Difference between inline and inline-block?
+	inline	inline-block
+	Width & height ignored	Width & height respected
+	No margin top/bottom	Margin & padding work
+	Same line	Same line
+	One-line interview answer:
+		Inline elements don’t accept width and height, while inline-block elements do.
+	
+	73. How to hide an element in CSS?
+	Common ways:
+		1. display: none → removes element
+		2. visibility: hidden → hides but keeps space
+		3. opacity: 0 → invisible but clickable
+	One-line interview answer:
+		Elements can be hidden using display none, visibility hidden, or opacity zero.
+	71. How to change image size without distortion?
+	To change image size without distortion, we maintain the aspect ratio.
+	Best ways:
+		• Use width and height: auto
+		• Use object-fit: cover or contain
+	Example:
+	
+	img {
+  width: 100%;
+  height: auto;
+}
+	or
+	
+	img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+	One-line interview answer:
+		To avoid distortion, we maintain aspect ratio using height auto or object-fit.
+	
+	72. How to create a responsive navbar?
+	A responsive navbar can be created by:
+		• Using Flexbox
+		• Using media queries
+		• Switching to menu icon (hamburger) on small screens
+	Simple idea:
+	
+	nav {
+  display: flex;
+  justify-content: space-between;
+}
+	One-line interview answer:
+		A responsive navbar is created using Flexbox and media queries.
+	
+	73. Why Flexbox is better than float?
+	Flexbox is better because:
+		• Easy alignment (center, spacing)
+		• Responsive by default
+		• Less CSS code
+		• No clearfix issues
+	Float problems:
+		• Not designed for layout
+		• Needs clear fixes
+	One-line interview answer:
+		Flexbox is better than float because it provides easy alignment and responsive layouts.
+		71. When to use Grid vs Flexbox?
+			• Use Flexbox for one-dimensional layouts (row or column)
+👉 navigation bars, buttons, cards alignment
+			• Use Grid for two-dimensional layouts (rows and columns)
+👉 full page layout, dashboard, gallery
+		One-line interview answer:
+			I use Flexbox for one-direction layouts and Grid for full page or two-direction layouts.
+		
+		72. How to improve CSS performance?
+		You can improve CSS performance by:
+			• Writing clean and minimal CSS
+			• Avoiding deep selectors
+			• Using external CSS
+			• Reusing CSS classes
+			• Avoiding too many !important
+			• Using minified CSS
+			• Using Flexbox/Grid instead of float
+		One-line interview answer:
+			CSS performance is improved by clean code, reusable classes, and modern layout techniques.
+		
+		73. Common CSS mistakes?
+		Some common CSS mistakes are:
+			• Overusing !important
+			• Using too many px instead of responsive units
+			• Not using box-sizing: border-box
+			• Not writing responsive CSS
+			• Using float instead of Flexbox/Grid
+			• Duplicate or unused CSS
+		One-line interview answer:
+			Common CSS mistakes include overusing !important, fixed units, and poor responsiveness.
+		
+		74. Explain a layout you built using CSS.
+		Sample interview answer (you can say this):
+			I built a responsive website layout using Flexbox.
+			The header contains a navigation bar aligned using Flexbox.
+			The main section uses Grid to divide content into columns.
+			Media queries were used to make the layout responsive on mobile.
+			I also used CSS variables and box-sizing for clean design.
+		Short version (if time is less):
+			I built a responsive layout using Flexbox for navigation and Grid for content, with media queries for mobile support.
